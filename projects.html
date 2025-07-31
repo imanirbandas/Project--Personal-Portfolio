@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anirban | Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      box-shadow: 0 0 15px #00ffff;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      bottom: -4px;
+      left: 0;
+      background-color: #00ffff;
+      box-shadow: 0 0 10px #00ffff;
+    }
+
+    .project-section {
+      padding: 130px 20px 80px;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    .section-title {
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+      background: linear-gradient(to right, #ffe600, #ff00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 3s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ffd700; }
+      to { text-shadow: 0 0 30px #ff33ff; }
+    }
+
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 0 40px;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.07);
+      padding: 25px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
+    }
+
+    .project-card h3 {
+      font-size: 1.4rem;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+      color: #dddddd;
+    }
+
+    .tool-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .tool-badge {
+      background: #00ffff30;
+      color: #00ffff;
+      padding: 5px 10px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      border: 1px solid #00ffff70;
+      box-shadow: 0 0 10px #00ffff50;
+    }
+
+    .upcoming {
+      border: 2px dashed #ffd700;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 5px #ffd700; }
+      50% { box-shadow: 0 0 20px #ffcc00; }
+      100% { box-shadow: 0 0 5px #ffd700; }
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      text-align: center;
+      color: #ccc;
+      margin-top: 40px;
+    }
+    header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-shadow: 0 0 15px #00ffff;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ffff90;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="https://plus.unsplash.com/premium_photo-1682002135678-87b8a2fdde50?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bG9nb3xlbnwwfHwwfHx8MA%3D%3D" alt="Logo" class="logo" />
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="project-section">
+    <h2 class="section-title">🚀 AI-Powered Project Gallery</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>Modern, responsive portfolio built with animation & dark mode.</p>
+        <div class="tool-badges">
+          <span class="tool-badge">HTML</span>
+          <span class="tool-badge">CSS</span>
+          <span class="tool-badge">JS</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>Restaurant Web App</h3>
+        <p>Interactive food UI, transitions, filters, and hover effects.</p>
+        <div class="tool-badges">
+          <span class="tool-badge">HTML</span>
+          <span class="tool-badge">JS</span>
+          <span class="tool-badge">Responsive</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>Blog UI Page</h3>
+        <p>Minimal blog layout with animation, scroll reveal, and dark/light mode.</p>
+        <div class="tool-badges">
+          <span class="tool-badge">Figma</span>
+          <span class="tool-badge">CSS</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>Gita Sloka Viewer</h3>
+        <p>Displays verses from JSON dynamically using Vanilla JS.</p>
+        <div class="tool-badges">
+          <span class="tool-badge">JavaScript</span>
+          <span class="tool-badge">JSON</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>Tourism Template</h3>
+        <p>Mobile-first tourism site, parallax effect, and smooth scroll.</p>
+        <div class="tool-badges">
+          <span class="tool-badge">Tailwind</span>
+          <span class="tool-badge">HTML</span>
+          <span class="tool-badge">CSS</span>
+        </div>
+      </div>
+      <div class="project-card upcoming">
+        <h3>Coming Soon: ChatBot</h3>
+        <p>Vanilla JS chatbot mimicking AI interaction.</p>
+        <div class="tool-badges">
+          <span class="tool-badge">AI</span>
+          <span class="tool-badge">HTML</span>
+          <span class="tool-badge">JS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Anirban Das. All rights reserved.
+  </footer>
+</body>
+</html>
